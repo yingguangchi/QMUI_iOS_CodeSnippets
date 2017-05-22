@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>cuiview</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>&lt;#类型#&gt; * &lt;#viewName#&gt; =[[&lt;#类型#&gt; alloc] init];
+[&lt;#superview#&gt; addSubview:&lt;#viewName#&gt;];
+[&lt;#viewName#&gt; mas_makeConstraints:^(MASConstraintMaker *make) {
+    make.top.equalTo(&lt;#cview#&gt;).offset(&lt;#offset#&gt;*Scale_Height);
+    make.left.equalTo(&lt;#cview#&gt;).offset(&lt;#offset#&gt;*Scale_Width);
+    make.bottom.equalTo(&lt;#cview#&gt;).offset(&lt;#offset#&gt;*Scale_Height);
+    make.right.equalTo(&lt;#cview#&gt;).offset(&lt;#offset#&gt;*Scale_Width);
+    make.height.equalTo(@(&lt;#cview#&gt;*Scale_Height));
+    make.width.equalTo(@(&lt;#cview#&gt;*Scale_Width));
+    make.centerX.equalTo(&lt;#cview#&gt;).offset(&lt;#offset#&gt;);
+    make.centerY.equalTo(&lt;#cview#&gt;).offset(&lt;#offset#&gt;);
+}];
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>A7100677-2B62-4AD2-9A70-CD6E0B0BB4D6</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>创建uiview</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

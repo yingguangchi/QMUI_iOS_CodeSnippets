@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>+ (NSString *)transform:(NSString *)chinese
+{    
+    //将NSString装换成NSMutableString 
+    NSMutableString *pinyin = [chinese mutableCopy];    
+    //将汉字转换为拼音(带音标)    
+    CFStringTransform((__bridge CFMutableStringRef)pinyin, NULL, kCFStringTransformMandarinLatin, NO);    
+    NSLog(@"%@", pinyin);    
+    //去掉拼音的音标    
+    CFStringTransform((__bridge CFMutableStringRef)pinyin, NULL, kCFStringTransformStripCombiningMarks, NO);    
+    NSLog(@"%@", pinyin);    
+    //返回最近结果    
+    return pinyin;
+ }</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>8DAC80E1-9EF1-4396-8B07-E164F5F983FF</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>iOS 获取汉字的拼音</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
