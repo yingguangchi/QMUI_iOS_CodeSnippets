@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>- (NSString *)fetchLaunchImageName
+{
+NSArray* imagesDict = [[[NSBundle mainBundle] infoDictionary] valueForKey:@"UILaunchImages"];
+for (NSDictionary* dict in imagesDict) {
+if(CGSizeEqualToSize(CGSizeFromString(dict[@"UILaunchImageSize"]),[UIScreen mainScreen].bounds.size))
+{
+return dict[@"UILaunchImageName"];
+}
+}
+return nil;
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>DA06BEFF-E429-40E0-B5CF-2D5EA67DBF4D</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>获取启动图的名称</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

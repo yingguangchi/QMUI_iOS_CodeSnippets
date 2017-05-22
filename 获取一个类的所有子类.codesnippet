@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>+ (NSArray *) allSubclasses
+{
+    Class myClass = [self class];
+    NSMutableArray *mySubclasses = [NSMutableArray array];
+    unsigned int numOfClasses;
+    Class *classes = objc_copyClassList(&amp;numOfClasses;);
+    for (unsigned int ci = 0; ci &lt; numOfClasses; ci++)
+    {
+        Class superClass = classes[ci];
+        do{
+            superClass = class_getSuperclass(superClass);
+        } while (superClass &amp;&amp; superClass != myClass);
+
+        if (superClass)
+        {
+            [mySubclasses addObject: classes[ci]];
+        }
+    }
+    free(classes);
+    return mySubclasses;
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>AFADA31E-1938-4F63-9CBE-54B65153EB1B</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>获取一个类的所有子类</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
